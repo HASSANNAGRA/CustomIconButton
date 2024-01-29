@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="_nd_assignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAI-pO-Vor">
+                                <rect key="frame" x="254" y="79" width="86" height="30.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="9i5-aU-MgR"/>
+                                    <constraint firstAttribute="height" constant="30.670000000000002" id="PJk-TG-lEx"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="sidebar.right" catalog="system"/>
+                                <connections>
+                                    <action selector="reLoadButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuD-yq-jJ5"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTO-m4-5hh">
+                                <rect key="frame" x="105" y="0.0" width="270" height="812"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zjw-Zi-3pF">
+                                        <rect key="frame" x="188" y="35" width="74" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="AeO-iI-L94"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="multiply"/>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5K4-iv-dVY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.72749596829999996" green="0.6141203046" blue="0.53359711170000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Zjw-Zi-3pF" firstAttribute="top" secondItem="eTO-m4-5hh" secondAttribute="top" constant="35" id="Xiu-lb-3e8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zjw-Zi-3pF" secondAttribute="trailing" constant="8" id="ylR-Fe-YpA"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="zf8-D3-jzH">
+                                <rect key="frame" x="-13" y="-13" width="401" height="833"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eTO-m4-5hh" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.72" id="EYl-LH-O1w"/>
+                            <constraint firstAttribute="trailing" secondItem="eTO-m4-5hh" secondAttribute="trailing" id="IN5-kr-6lH"/>
+                            <constraint firstItem="eTO-m4-5hh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LHJ-TO-jRH"/>
+                            <constraint firstItem="TAI-pO-Vor" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="254" id="LKK-iY-qxo"/>
+                            <constraint firstAttribute="bottom" secondItem="eTO-m4-5hh" secondAttribute="bottom" id="aGb-hF-e1h"/>
+                            <constraint firstItem="TAI-pO-Vor" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="oCV-3W-lf0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zf8-D3-jzH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="menuTrailingConstraint" destination="IN5-kr-6lH" id="cQd-Oe-6Fy"/>
+                        <outlet property="subView" destination="eTO-m4-5hh" id="OAj-bR-QN2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.199999999999999" y="66.502463054187189"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="multiply" width="50" height="50"/>
+        <image name="sample" width="389" height="832"/>
+        <image name="sidebar.right" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
